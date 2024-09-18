@@ -14,4 +14,8 @@ public class HelloWorldController{
     public String getAKnownPicture (@PathVariable String thisString) {
     return "Many silly clowns look like" + thisString;
     }
+    @PostMapping(value="silly")
+    public String postMethodName(@RequestBody Thing thing) {
+        return "The " + thing.getRobot() + "robot ate " + String.valueOf(thing.getBanana())
+    }
 }
