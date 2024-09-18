@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@RestController
+public class HelloWorldController{
+    @GetMapping(value="howya")
+    public String getHelloWorld(){
+        return  "Many silly clowns look like they know everything";
+    }
+    @GetMapping(value="muck/{thisString}")
+    public String getAKnownPicture (@PathVariable String thisString) {
+    return "Many silly clowns look like" + thisString;
+    }
+}
